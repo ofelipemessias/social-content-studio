@@ -1,0 +1,48 @@
+{
+  "name": "Exemplo: publicidade na advocacia",
+  "disclaimer": "Ruleset de EXEMPLO inspirado em boas praticas de publicidade profissional (cf. Provimento OAB 205/2021). Nao e parecer juridico; adapte as regras ao seu contexto.",
+  "rules": [
+    {
+      "id": "sem-promessa-de-resultado",
+      "description": "Nao prometer resultado",
+      "pattern": "\\b(garantimos|garantido|garantia de (vitoria|exito|resultado)|resultado certo|vitoria certa)\\b",
+      "severity": "error",
+      "suggestion": "Substitua por linguagem informativa, sem garantia de resultado."
+    },
+    {
+      "id": "sem-superlativos",
+      "description": "Nao usar superlativos ou comparacoes ('o melhor')",
+      "pattern": "\\b(melhor (advogad[oa]|escritorio|equipe)|maior (advogad[oa]|escritorio)|n\\s*º\\s*1|numero um|líder de mercado)\\b",
+      "severity": "error",
+      "suggestion": "Descreva a atuacao sem comparacoes de superioridade."
+    },
+    {
+      "id": "sem-gratuidade",
+      "description": "Evitar anuncio de gratuidade de servicos",
+      "pattern": "\\b(consulta|atendimento|analise) gratuit[oa]s?\\b",
+      "severity": "warning",
+      "suggestion": "A gratuidade mercantil pode ser vedada; prefira 'conteudo informativo'."
+    },
+    {
+      "id": "sem-precos",
+      "description": "Evitar anuncio de valores/precos de servicos",
+      "pattern": "R\\$\\s?\\d|por apenas\\b",
+      "severity": "warning",
+      "suggestion": "Nao anuncie precos em conteudo publicitario profissional."
+    },
+    {
+      "id": "sem-urgencia-artificial",
+      "description": "Evitar urgencia artificial ('so hoje')",
+      "pattern": "\\b(so hoje|ultima chance|corra|vagas limitadas)\\b",
+      "severity": "warning",
+      "suggestion": "Remova gatilhos de escassez artificial."
+    },
+    {
+      "id": "sem-captacao-direta",
+      "description": "Evitar captacao direta de cliente ('me chama no direct para contratar')",
+      "pattern": "\\b(me chama no (direct|privado) para contratar|contrate (agora|ja))\\b",
+      "severity": "warning",
+      "suggestion": "Prefira CTA informativo, sem oferta direta de contratacao."
+    }
+  ]
+}
